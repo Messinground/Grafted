@@ -12,14 +12,14 @@
     --link-hover-light: darkblue;
     --Section-Text-L: #000;
 
-    --bg-dark: linear-gradient(to bottom, #72808C, #221);
-    --text-color-dark: white;
+    --bg-dark: linear-gradient(to bottom, #ffffff, rgb(0, 0, 0));
+    --text-color-dark: rgb(20, 42, 68);
     --link-color-dark: #FFF;
     --link-hover-dark: black;
-    --Section-Text-D: #D5E5F2;
+    --Section-Text-D: #ffffff;
 
     --Section-Background-L: rgba(100, 107, 50, 0.65);
-    --Section-Background-D: rgba(79, 85, 33, 0.65);
+    --Section-Background-D: rgba(85, 117, 136, 0.65);
 }
 
 
@@ -206,3 +206,34 @@ a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip:hover::before {
+    content: attr(data-tooltip);  /* Get the content from the 'data-tooltip' attribute */
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    top: 100%; /* Position the tooltip below the text */
+    left: 50%; /* Center the tooltip horizontally */
+    transform: translateX(-50%);
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    z-index: 1; /* Ensure the tooltip is above other elements */
+
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: 'Arial', sans-serif;
+    max-width: 300px; /* Adjust the maximum width as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  sup {
+    font-size: 0.8em;
+    vertical-align: super;
+  }
+  
